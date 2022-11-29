@@ -9,21 +9,21 @@
 #mail{
     font-size: 10px;
     text-align: center;
+    color: wheat;
 }
 .main{
-    height: 100vh;
+    height: max-content;
     width: 100vw;
     display: flex;
     flex-direction: row;
 }
+
 .sidebar{
     height: 100vh;
-    /* position: absolute; */
     width: auto;
-    /* border: 2px solid red; */
     background: linear-gradient(#c9cccf,#545960, rgb(18, 17, 17));
+    /* background: linear-gradient(#c6ffdd, #fbd786, #f7797d); */
     padding: 10px;
-    /* visibility: visible; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -33,10 +33,17 @@
 .burger{
     height: 4vh;
     display: none;
-    /* position: absolute; */
-    /* float: right; */
     float: right;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: auto;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+.quick h1{
+    display: flex;
 }
 .burger img{
     height: 100%;
@@ -44,7 +51,6 @@
 }
 .contactInfo{
     height: 20vh;
-    /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -148,7 +154,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 2px solid red; */
 }
 .contact{
     display: flex;
@@ -171,16 +176,15 @@
 .mainContent{
     display: block;
     width: 80vw;
-    /* border: 2px solid red; */
     padding: 3px;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    background: #152A43;
-    gap: 4px;
+    gap: 2px;
     height: 100vh;
 }
 .quick{
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    background: linear-gradient(wheat,white);
     color: black;
     padding: 5px;
     border-radius: 7px;
@@ -191,21 +195,23 @@
     border-bottom: 4px solid black;
     border-radius: 10px;
     margin-bottom: 10px;
-    /* padding: 10px; */
     font-size: 30px;
 }
 .provide p{
     font-size: larger;
 }
 .cards{
-    padding: 10px;
+    padding: 5px;
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2%;
-    background-color: white;
+    background: linear-gradient(wheat,white);
+}
+.footer2{
+    display: none;
 }
 .card1,.card2,.card3,.card4{
     background-color: rgb(250, 250, 250);
@@ -216,38 +222,36 @@
     color: black;
     width: 15vw;
     height: 23vh;
-    border-radius: 10px;
-    border: 2px solid black;
+    /* border-radius: 10px; */
+    border-right: 2px solid black;
+    border-left: 2px solid black;
 }
 
 .card1 h2,.card2 h2,.card3 h2,.card4 h2{
     border-bottom: 2px solid black;
     border-top: 2px solid black;
     border-radius: 10px;
+    font-size: 21px;
 }
 .dsSkill p{
     font-size: smaller;
 }
+
 .infoaboutSkills{
     text-align: center;
-    /* background-color: #f8f8f8; */
-    background: linear-gradient(#c9cccf,#545960, rgb(18, 17, 17));
+    background: linear-gradient(wheat,white);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    color: rgb(166, 153, 153);
-}
-.infoaboutSkills :nth-child(2){
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .cppSkill,.javaSkill,.webSkill,.dsSkill{
     background-color: wheat;
     width: 100%;
     color: rgb(250, 249, 249);
     display: flex;
-    /* text-align: center; */
 }
 .cppSkill span{
     color: black;
@@ -423,10 +427,10 @@
         width: 19.5vw;
     }
 } */
-@media screen and (max-width:1240px) {
+@media screen and (max-width:1020px) {
     .main{
-        /* height: 105vh; */
-        background-color: #1c3452;
+        padding: 4px;
+        background-color: black;
     }
     .mainContent{
        display: grid;
@@ -456,12 +460,12 @@
     }
     .cards{
         /* height: 20vh; */
-        background-color: #152A43;
+        background: linear-gradient(#c6ffdd, #fbd786, #f7797d);
         display: flex;
         flex-direction: row;
         width: auto;
         height: auto;
-        padding: 10px ;
+        padding: 7px ;
         overflow-y: scroll;
         animation: old 1s linear;
     }
@@ -482,7 +486,7 @@
     .card1,.card2,.card3,.card4{
         width: 20vw;
         height: max-content;
-        padding: auto;
+        /* padding: auto; */
     }
     .infoaboutSkills{
         height: 50vh;
@@ -495,12 +499,15 @@
         height: auto;
     }
 }
-@media screen and (max-width:1096px) {
+@media screen and (max-width:996px) {
     .sidebar{
         width: 25vw;
     }
     .mainContent{
         width: 75vw;
+    }
+    .cards{
+        height: auto;
     }
 }
 @media screen and (max-width:879px){
@@ -574,10 +581,6 @@
     .draw3{
         margin-bottom: 10px;
     }
-    .burger{
-        display: block;
-        width: 10vw;
-    }
     .quick h1{
         font-size: 19px;
     }
@@ -614,8 +617,7 @@
         width: 5vw;
     }
     .main{
-        height: 122vh;
-        background-color: #1c3452;
+        height: max-content;
     }
     .cards{
         height: 42vh;
@@ -643,6 +645,11 @@
     }
 
 }
+@media screen and (max-width:761px) {
+    .main{
+        height: 100vh;
+    }
+}
 @media screen and (max-width:562px) {
     .quick h1{
         font-size: 25px;
@@ -652,6 +659,9 @@
     }
     .sidebar{
         width: max-content;
+    }
+    .main{
+        height: 100vh;
     }
     .cards{
         height: 42vh;
@@ -680,11 +690,16 @@
 }
 
 @media screen and (max-width:440px) {
-    .main{
-        height: 100vh;
+    .mainContent{
+        height:auto;
+        padding: 2px;
+    }
+    .burger{
+        display: block;
+        width: 10vw;
     }
     .quick{
-        height: 30vh;
+        background-color: wheat;
         animation: jo 2s linear;
     }
     @keyframes jo {
@@ -692,15 +707,15 @@
             height: 0vh;
         }
         50%{
-            height: 20vh;
+            height: 50%;
         }
         100%{
-            height: 30vh;
+            height: 100%;
         }
     }
     .infoaboutSkills{
+        color: black;
         height: auto;
-
     }
     .cards{
         display: flex;
@@ -708,26 +723,57 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        height: 60vh;
-        padding: 5px;
-        animation: ho 1s linear;
+        height: max-content;
+        /* padding: 5px; */
+        /* border: 2px solid red; */
+        animation: ho 2s linear;
     }
     @keyframes ho {
         0%{
-            height: 60vh;
+            height: 0;
+        }
+        50%{
+            height: 35vh;
         }
         100%{
-            height: 60vh;
+            height: 70vh;
         }
     }
     .card1,.card2,.card3,.card4{
-        width: 40vw;
+        width: auto;
         height: max-content;
-        overflow: 0;
+        overflow: scroll;
+    }
+    .sidebar{
+        animation: side .3s linear;
+    }
+    .quick {
+        width: auto;
+        height: auto;
+    }
+    @keyframes side {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 50vw;
+        }
+        
+    }
+    .footer2{
+        display: block;
+        color: rgb(254, 254, 254);
+        text-align: center;
+    }
+    .footer{
+        display: none;
     }
 }
 @media screen and (max-width:358px) {
     .provide p{
         font-size: 16px;
+    }
+    .main{
+        height: 123vh;
     }
 }
