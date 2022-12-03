@@ -314,7 +314,7 @@ body{
 
 .quick{
     width: 17vw;
-    animation: box1 1s linear;
+    /* animation: box1 1s linear; */
     height: 99vh;
 }
 .cards{
@@ -473,7 +473,7 @@ body{
     .quick{
         height: 23vh;
         width: 69vw;
-        animation: new 1s linear;
+        /* animation: new 1s linear; */
     }
     @keyframes new {
         0%{
@@ -492,10 +492,10 @@ body{
         display: flex;
         flex-direction: row;
         width: auto;
-        height: auto;
+        height: max-content;
         padding: 7px ;
         /* overflow-y: scroll; */
-        animation: old 1s linear;
+        /* animation: old 1s linear; */
     }
     @keyframes old {
         0%{
@@ -658,7 +658,7 @@ body{
         justify-content: center;
         flex-direction: column;
         flex-wrap: wrap;
-        animation: ip 2s linear;
+        /* animation: ip 2s linear; */
     }
     @keyframes ip {
         0%{
@@ -703,7 +703,7 @@ body{
         justify-content: center;
         flex-direction: column;
         flex-wrap: wrap;
-        animation: ip 2s linear;
+        /* animation: ip 2s linear; */
     }
     @keyframes ip {
         0%{
@@ -735,7 +735,7 @@ body{
     }
     .quick{
         background-color: wheat;
-        animation: jo 2s linear;
+        /* animation: jo 2s linear; */
     }
     @keyframes jo {
         0%{
@@ -766,7 +766,7 @@ body{
         padding: 10px;
         /* border: 2px solid red; */
         gap: 1rem;
-        animation: ho 2s linear;
+        /* animation: ho 2s linear; */
     }
     @keyframes ho {
         0%{
