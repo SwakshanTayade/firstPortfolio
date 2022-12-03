@@ -6,6 +6,10 @@
     font-family: 'Patrick Hand', cursive;
     font-family: 'Ubuntu', sans-serif;
 }
+body{
+    background-color: black;
+    /* border: 2px solid red; */
+}
 #mail{
     font-size: 10px;
     text-align: center;
@@ -13,7 +17,6 @@
 }
 .main{
     height: max-content;
-    width: 100vw;
     display: flex;
     flex-direction: row;
 }
@@ -32,7 +35,7 @@
 }
 .burger{
     height: 4vh;
-    display: none;
+    visibility: hidden;
     float: right;
     top: 0;
     display: flex;
@@ -136,7 +139,7 @@
 }
 .java i{
     font-size: 50px;
-    color: rgb(166, 153, 153);
+    color: orangered;
 }
 .cpp .image{
     height: 30%;
@@ -175,7 +178,7 @@
 }
 .mainContent{
     display: block;
-    width: 80vw;
+    width: 79.5vw;
     padding: 3px;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -184,21 +187,23 @@
 }
 .quick{
     /* background-color: whitesmoke; */
-    background: linear-gradient(wheat,white);
+    background: url(https://i.pinimg.com/736x/52/18/46/5218466c143c7799a8fcf2a443770eb3.jpg);
+    background-size: cover;
     color: black;
-    padding: 5px;
+    padding: 15px;
     border-radius: 7px;
     display: flex;
     flex-direction: column;
+    box-shadow: 1px 1px 500px wheat;
 }
 .quick h1{
     border-bottom: 4px solid black;
     border-radius: 10px;
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 25px;
 }
 .provide p{
-    font-size: larger;
+    font-size: smaller;
 }
 .cards{
     padding: 5px;
@@ -207,8 +212,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2%;
-    background: linear-gradient(wheat,white);
+    gap: 1rem;
+    /* overflow-y: scroll; */
+    background-color: white;
 }
 .footer2{
     display: none;
@@ -218,34 +224,54 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
-    padding: 3px;
+    padding: 10px;
     color: black;
-    width: 15vw;
+    width: 17vw;
     height: 23vh;
     /* border-radius: 10px; */
-    border-right: 2px solid black;
-    border-left: 2px solid black;
+    box-shadow: 1px 1px 50px rgb(177, 173, 173);
 }
 
 .card1 h2,.card2 h2,.card3 h2,.card4 h2{
-    border-bottom: 2px solid black;
-    border-top: 2px solid black;
-    border-radius: 10px;
+    border-bottom: 2px solid rgb(63, 62, 62);
+    /* border-top: 2px solid black; */
+    /* border-radius: 10px; */
     font-size: 21px;
+    text-align: center;
 }
 .dsSkill p{
     font-size: smaller;
 }
-
+.Images{
+    height: 80vh;
+    width: 44vw;
+}
+.Images img{
+    height: 100%;
+    width: 100%;
+}
 .infoaboutSkills{
+    background-color: white;
     text-align: center;
-    background: linear-gradient(wheat,white);
     border-radius: 10px;
     display: flex;
+    padding: 10px 0;
+    /* width: 43vw; */
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     color: rgb(0, 0, 0);
+    /* background: url(https://png.pngtree.com/png-clipart/20200701/original/pngtree-children-s-software-programming-png-image_5401259.jpg);
+    background-size: cover; */
+}
+.information{
+    background: rgb(255, 255, 255);
+    width: 100%;
+}
+.information p,h2,h3{
+    margin-right: 10px;
+    float: right;
+    clear: both;
 }
 .cppSkill,.javaSkill,.webSkill,.dsSkill{
     background-color: wheat;
@@ -293,7 +319,7 @@
 }
 .cards{
     height: 99vh;
-    width: 18vw;
+    width: 19vw;
     /* animation: box2 1s linear; */
 }
 .infoaboutSkills{
@@ -427,7 +453,13 @@
         width: 19.5vw;
     }
 } */
-@media screen and (max-width:1020px) {
+@media screen and (max-width:1220px) {
+    .card1,.card2,.card3,.card4{
+        font-size: small;
+    }
+}
+@media screen and (max-width:1024px) {
+
     .main{
         padding: 4px;
         background-color: black;
@@ -454,19 +486,15 @@
             height: 23vh;
         }
     }
-    .infoaboutSkills{
-        height: 39vh;
-        width: 69vw;
-    }
     .cards{
         /* height: 20vh; */
-        background: linear-gradient(#c6ffdd, #fbd786, #f7797d);
+        background-color: white;
         display: flex;
         flex-direction: row;
         width: auto;
         height: auto;
         padding: 7px ;
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
         animation: old 1s linear;
     }
     @keyframes old {
@@ -511,6 +539,9 @@
     }
 }
 @media screen and (max-width:879px){
+    .burger{
+        visibility: visible;
+    }
     .sidebar{
         display: none;
         width: max-content;
@@ -645,10 +676,11 @@
     }
 
 }
-@media screen and (max-width:761px) {
+@media screen and (max-width:771px) {
     .main{
         height: 100vh;
     }
+    
 }
 @media screen and (max-width:562px) {
     .quick h1{
@@ -689,13 +721,16 @@
     }
 }
 
-@media screen and (max-width:440px) {
+@media screen and (max-width:490px) {
+    .main{
+        padding: 20px;
+    }
     .mainContent{
         height:auto;
         padding: 2px;
     }
     .burger{
-        display: block;
+        visibility: visible;
         width: 10vw;
     }
     .quick{
@@ -704,7 +739,7 @@
     }
     @keyframes jo {
         0%{
-            height: 0vh;
+            height: 20%;
         }
         50%{
             height: 50%;
@@ -715,7 +750,11 @@
     }
     .infoaboutSkills{
         color: black;
-        height: auto;
+        height: 40vh;
+    }
+    .information p,.information h2, .information h3{
+        font-size: 16px;
+        color: #0077B5;
     }
     .cards{
         display: flex;
@@ -724,8 +763,9 @@
         justify-content: center;
         flex-direction: column;
         height: max-content;
-        /* padding: 5px; */
+        padding: 10px;
         /* border: 2px solid red; */
+        gap: 1rem;
         animation: ho 2s linear;
     }
     @keyframes ho {
@@ -741,11 +781,25 @@
     }
     .card1,.card2,.card3,.card4{
         width: auto;
-        height: max-content;
-        overflow: scroll;
+        height: 20vh;
+        display: flex;
+        padding: 10px;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .card1 h2,.card2 h2,.card3 h2,.card4 h2{
+        color: #0077B5;
     }
     .sidebar{
         animation: side .3s linear;
+        height: 161vh;
+        padding: 10px;
+    }
+    .quick h1{
+        font-size: 20px;
+    }
+    .provide p{
+        font-size: smaller;
     }
     .quick {
         width: auto;
@@ -764,6 +818,7 @@
         display: block;
         color: rgb(254, 254, 254);
         text-align: center;
+        background-color: black;
     }
     .footer{
         display: none;
@@ -775,5 +830,6 @@
     }
     .main{
         height: 123vh;
+        background-color: black;
     }
 }
