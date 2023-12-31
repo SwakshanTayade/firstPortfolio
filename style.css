@@ -828,7 +828,7 @@ body{
     .provide p{
         font-size: 16px;
     }
-    .main{
+    .main{  
         height: 123vh;
         background-color: black;
     }
